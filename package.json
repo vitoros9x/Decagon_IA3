@@ -1,0 +1,9 @@
+{
+	"scripts": {
+		"watch": "sass --watch ./assets/css/styles.scss ./assets/css/styles.css --style compressed"
+	},
+	"dependencies": {
+		"bootstrap": "^5.3.2",
+		"sass": "^1.69.5"
+	}
+}
