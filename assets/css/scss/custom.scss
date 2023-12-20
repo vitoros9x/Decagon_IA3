@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $container-gallery-width: 500px;
 $close-button-space: 24px;
 
@@ -78,7 +80,7 @@ body {
     cursor: pointer;
 
     &.active {
-      border: 2px solid $primary;
+      border: 2px solid map.get($theme-colors, "primary");
     }
   }
 }
