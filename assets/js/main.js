@@ -67,4 +67,20 @@ const $$ = document.querySelectorAll.bind(document)
       handleChangeImageOnKeyBoard(currentImageChoosingIndex)
     }
   })
+
+  window.addEventListener('resize', (e) => {
+    const screenWidth = e.target.innerWidth
+
+    if (screenWidth < 500) {
+      imageThumbWrapper.forEach(imageItem => {
+        imageItem.style.width = `${(screenWidth - 24) / 3 - 10}px`
+      })
+
+      return
+    }
+
+    imageThumbWrapper.forEach(imageItem => {
+      imageItem.style.width = ''
+    })
+  })
 })()
