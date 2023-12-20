@@ -1,0 +1,108 @@
+$container-gallery-width: 500px;
+$close-button-space: 24px;
+
+@mixin imageRatio($percent) {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: $percent * 1%;
+  }
+
+  img {
+    display: block;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+body {
+  background: #b6b6b6
+}
+
+.body {
+  height: 100vh;
+}
+
+.square-image {
+  @include imageRatio(100);
+}
+
+.picture-gallery {
+  max-width: $container-gallery-width;
+  width: 100%;
+
+  &__big-image {
+    cursor: pointer;
+  }
+
+  &__thumbs {
+    gap: 15px;
+    width: max-content;
+    margin-top: 15px;
+    padding-bottom: 8px;
+
+    &-wrapper {
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        height: 8px !important;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: transparent !important;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px !important;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    }
+  }
+
+  &__thumb-item {
+    width: calc($container-gallery-width / 3 - 10px);
+    cursor: pointer;
+
+    &.active {
+      border: 2px solid $primary;
+    }
+  }
+}
+
+.zoom-modal {
+  position: fixed;
+  inset: 0;
+  background: #797979d3;
+
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  button {
+    position: absolute;
+    top: $close-button-space;
+    right: $close-button-space;
+  }
+
+  img {
+    display: block;
+    width: 80%;
+    object-fit: cover;
+  }
+}

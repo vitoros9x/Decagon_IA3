@@ -4,14 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <script defer src="./assets/js/main.js"></script>
   </head>
   <body>
-    <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-primary">Left</button>
-      <button type="button" class="btn btn-secondary">Middle</button>
-      <button type="button" class="btn btn-info">Right</button>
+    <div
+      class="body container d-flex justify-content-center align-items-center"
+    >
+      <div class="picture-gallery">
+        <div class="picture-gallery__big-image square-image">
+          <img
+            src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+            alt="big-image"
+          />
+        </div>
+        <div class="picture-gallery__thumbs-wrapper">
+          <div class="picture-gallery__thumbs d-flex">
+            <div class="picture-gallery__thumb-item square-image active">
+              <img
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt="thumb-img"
+              />
+            </div>
+            <div class="picture-gallery__thumb-item square-image">
+              <img
+                src="https://www.scusd.edu/sites/main/files/main-images/camera_lense_0.jpeg"
+                alt="thumb-img"
+              />
+            </div>
+            <div class="picture-gallery__thumb-item square-image">
+              <img
+                src="https://th.bing.com/th/id/OIG.b7fbyFnoRp_h0eDim7rl"
+                alt="thumb-img"
+              />
+            </div>
+            <div class="picture-gallery__thumb-item square-image">
+              <img
+                src="https://buffer.com/library/content/images/2023/09/instagram-image-size.jpg"
+                alt="thumb-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="zoom-modal zoom-modal-overlay d-flex justify-content-center align-items-center hidden">
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+
+      <img src="" alt="img-modal">
     </div>
   </body>
 </html>

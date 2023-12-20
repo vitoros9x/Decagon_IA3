@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"watch": "sass --watch ./assets/css/styles.scss ./assets/css/styles.css --style compressed"
+		"start": "sass --watch ./assets/css/styles.scss ./assets/css/styles.css --style compressed"
 	},
 	"dependencies": {
 		"bootstrap": "^5.3.2",
